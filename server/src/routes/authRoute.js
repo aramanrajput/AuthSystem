@@ -81,7 +81,8 @@ router.post('/logout',rateLimit, async (req, res) => {
 
 
 router.get('/profile',rateLimit, async (req, res) => {
-    const user = await User.findById(req.user.id).select('-password');
+
+    const user = await User.findById("67a9f9f1601efc04384964e3").select('-password');
     res.json(user);
 });
 

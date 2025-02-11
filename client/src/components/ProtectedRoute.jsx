@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext";
 
 const ProtectedRoute = ({ role }) => {
   const { user } = useAuth();
-console.log(user,"USER ROLE")
+console.log(user,"USESR ++++++++++++++++++")
   if (!user) return <Navigate to="/login" />;
   if (role && user.role !== role) return <Navigate to="/dashboard" />;
 
